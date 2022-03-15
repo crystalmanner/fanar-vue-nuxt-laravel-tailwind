@@ -1,0 +1,24 @@
+// This sets our default direction
+$dir: left !default;
+// This sets our opposite default direction
+$opDir: right !default;
+$scale: 1 !default;
+$bDir: ltr !default;
+$opbDir: rtl !default;
+$sign: 1 !default;
+$opSign: -1 !default;
+$sourcefile: '../';
+
+@function invertValues($top, $right, $bottom, $left: $right) {
+  @if $left != null {
+    @if $dir == right {
+      @return $top $left $bottom $right;
+    }
+    @else {
+      @return $top $right $bottom $left;
+    }
+  }
+  @else {
+    @return $top $right $bottom $left;
+  }
+}

@@ -1,0 +1,102 @@
+/* Avenir font */
+
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('#{$sourcefile}fonts/Avenir/AvenirLTStd-Light.woff'); /* IE9 Compat Modes */
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('#{$sourcefile}fonts/Avenir/AvenirLTStd-Roman.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('#{$sourcefile}fonts/Avenir/AvenirLTStd-Medium.woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('#{$sourcefile}fonts/Avenir/AvenirLTStd-Black.woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* end Avenir font */
+
+/* janna font */
+@font-face {
+  font-family: 'janna';
+  src: url("#{$sourcefile}fonts/janna/JannaLT-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'janna';
+  src: url("#{$sourcefile}fonts/janna/JannaLT-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* end janna font */
+
+
+/* Roboto */
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('#{$sourcefile}fonts/Roboto/Roboto-Light.eot'); /* IE9 Compat Modes */
+  src: url('#{$sourcefile}fonts/Roboto/Roboto-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('#{$sourcefile}fonts/Roboto/Roboto-Light.woff') format('woff'), /* Pretty Modern Browsers */
+  url('#{$sourcefile}fonts/Roboto/Roboto-Light.woff2') format('woff2'), /* Super Modern Browsers */
+  url('#{$sourcefile}fonts/Roboto/Roboto-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('#{$sourcefile}fonts/Roboto/Roboto-Light.svg#RobotoLight') format('svg');/* Legacy iOS */
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('#{$sourcefile}fonts/Roboto/Roboto-Regular.eot');
+  src: url('#{$sourcefile}fonts/Roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Regular.woff') format('woff'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Regular.ttf') format('truetype'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Regular.svg#RobotoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('#{$sourcefile}fonts/Roboto/Roboto-Medium.eot');
+  src: url('#{$sourcefile}fonts/Roboto/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Medium.woff') format('woff'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Medium.ttf') format('truetype'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Medium.svg#RobotoMedium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('#{$sourcefile}fonts/Roboto/Roboto-Bold.eot');
+  src: url('#{$sourcefile}fonts/Roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Bold.woff') format('woff'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Bold.ttf') format('truetype'),
+  url('#{$sourcefile}fonts/Roboto/Roboto-Bold.svg#RobotoBold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* end Roboto */

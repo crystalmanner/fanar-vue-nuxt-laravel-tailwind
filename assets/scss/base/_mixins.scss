@@ -1,0 +1,316 @@
+//$base: 62.5%;
+$base: 100%;
+@function get-value($n) {
+	@return $n / ($n * 0 + 1);
+}
+//@mixin font-size($font-size) {
+//	$base-size: get-value($base / 100);
+//	$base-px-size: 16 * $base-size;
+//	font-size: $font-size;
+//	font-size: (get-value($font-size) / $base-px-size) + rem;
+//}
+
+@mixin clearfix2() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin box-sizing($val) {
+	-moz-box-sizing: $val;
+	-webkit-box-sizing: $val;
+	box-sizing: $val;
+}
+@mixin border-radius($radius:5px) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin box-shadow($shadow) {
+	-moz-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+@mixin transform($transform) {
+	-moz-transform: $transform;
+	-webkit-transform: $transform;
+	transform: $transform;
+}
+@mixin background_contain() {
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+@mixin background_cover() {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@mixin transition($val,$val2:null) {
+	@if($val2){
+		-webkit-transition: $val, $val2;
+		transition: $val, $val2;
+	}
+	@else {
+		-webkit-transition: $val;
+		transition: $val;
+	}
+}
+@mixin transition_default() {
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+@mixin noselection() {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+@mixin one-line {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@mixin circle($width, $color) {
+	width: $width;
+	height: $width;
+	background-color: $color;
+	@include border-radius($width/2);
+}
+@mixin user-select() {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+//@mixin radius_solveproblem() {
+//	-webkit-mask-image: -webkit-radial-gradient(white, black);
+//}
+@mixin display_flex() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+@mixin flexitems_vcenter() {
+	align-items: center;
+}
+@mixin flexitems_hcenter() {
+	justify-content: center;
+}
+@mixin triangle($width, $dir , $color) {
+	@if($dir == up) {
+		width: 0; height: 0;
+		border-left: $width solid transparent;
+		border-right: $width solid transparent;
+		border-bottom: $width solid $color;
+	}
+	@else if($dir == down) {
+		width: 0; height: 0;
+		border-left: $width solid transparent;
+		border-right: $width solid transparent;
+		border-top: $width solid $color;
+	}
+	@else if($dir == left) {
+		width: 0; height: 0;
+		border-top: $width solid transparent;
+		border-bottom: $width solid transparent;
+		border-right: $width solid $color;
+	}
+	@else if($dir == right) {
+		width: 0; height: 0;
+		border-top: $width solid transparent;
+		border-bottom: $width solid transparent;
+		border-left: $width solid $color;
+	}
+}
+
+/* content better media queries */
+@mixin phoneSm {
+	@media only screen and (max-width:480px) {
+		@content;
+	}
+}
+
+@mixin phone($width:80%) {
+	@media only screen and (max-width:600px) {
+		@content;
+	}
+}
+
+
+@mixin vertical-align-before() {
+	&:before {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		margin-right: -0.25em;
+		vertical-align: middle;
+	}
+}
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == "small" {
+		@media screen and (max-width: 480px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "medium" {
+		@media screen and (max-width: 768px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "large" {
+		@media screen and (max-width: 1400px) {
+			@content;
+		}
+	}
+	@else {
+		@media screen and (max-width: $breakpoint) {
+			@content;
+		}
+	}
+}
+//portrait
+//landscape
+@mixin respond-to-has-orientation($breakpoint, $orientation) {
+  @media screen and (max-width: $breakpoint) and (orientation: $orientation) {
+    @content;
+  }
+}
+@mixin font-material() {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+}
+
+@mixin respond-to-min-width($width) {
+	@media screen and (min-width: $width) {
+		@content;
+	}
+}
+@mixin respond-to-max-height($height) {
+	@media screen and (max-height: $height) {
+		@content;
+	}
+}
+@mixin respond-to-max-width-min-height($width, $height) {
+	@media screen and (max-width: $width) and (min-height: $height)  {
+		@content;
+	}
+}
+@mixin respond-to-min-width-max-height($width, $height) {
+	@media screen and (min-width: $width) and (max-height: $height)  {
+		@content;
+	}
+}
+@mixin respond-to-min-max-width($min, $max) {
+	@media screen and (min-width: $min) and (max-width: $max)  {
+		@content;
+	}
+}
+@mixin respond-to-min-max-width-max-height($minW, $maxW, $maxH) {
+	@media screen and (min-width: $minW) and (max-width: $maxW) and (max-height: $maxH) {
+		@content;
+	}
+}
+
+@mixin oneline(){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@mixin oneline1($number-line){
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: $number-line;
+	-webkit-box-orient: vertical;
+}
+
+@mixin border($size,$type,$color) {
+	-moz-border: $size $type $color;
+	-webkit-border: $size $type $color;
+	border: $size $type $color;
+}
+
+@mixin filter($type) {
+	-moz-filter: $type;
+	-webkit-filter: $type;
+	filter: $type;
+}
+
+@mixin placeholder($color, $font-size, $font-weight, $opacity: 1){
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		color:    $color;
+		font-size: $font-size;
+		font-weight: $font-weight;
+    opacity: $opacity;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color:    $color;
+		font-size: $font-size;
+		font-weight: $font-weight;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color:    $color;
+		font-size: $font-size;
+		font-weight: $font-weight;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color:    $color;
+		font-size: $font-size;
+		font-weight: $font-weight;
+	}
+}
+
+
+@mixin clip-path($polygon){
+	-webkit-clip-path: $polygon;
+	clip-path: $polygon;
+}
+
+@mixin scrollbar($width, $borderradius){
+	::-webkit-scrollbar {
+		width: $width;
+	}
+
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		border-radius: $borderradius;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: $borderradius;
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	}
+}
+@mixin menu-transition() {
+	//transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+	transition: transform 0.3s ease;
+}
+$base-font-size: 16px;
+@function em($px, $base: $base-font-size) {
+	@return ($px / $base) * 1em;
+}
+
+@function rem($px, $base: $base-font-size) {
+	@return ($px / $base) * 1rem;
+}
+
+@function get-vw($target) {
+	$vw-context: (1920 * 0.01) * 1px;
+	@return ($target / $vw-context) * 1vw;
+}

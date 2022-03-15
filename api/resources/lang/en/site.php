@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'Sat' => 'Saturday',
+    'Sun' => 'Sunday',
+    'Mon' => 'Monday',
+    'Tue' => 'Tuesday',
+    'Wed' => 'Wednesday',
+    'Thu' => 'Thursday',
+    'Fri' => 'Friday',
+
+    'Jan' => 'January',
+    'Feb' => 'February',
+    'Mar' => 'March',
+    'APR' => 'April',
+    'May' => 'May',
+    'Jun' => 'June',
+    'Jul' => 'July',
+    'Aug' => 'August',
+    'Sep' => 'September',
+    'Oct' => 'October',
+    'Nov' => 'November',
+    'Dec' => 'December',
+
+    "seo_title" => ":title - Fanar Realty",
+    "seo_description" => ":type :rooms for sale in :municipality :city. Show more properties for sale in turkey",
+    "north" => "North",
+    "south" => "South",
+    "east" => "East",
+    "west" => "West",
+
+    "less_500" => "less than 500K",
+    "500_1000" => "500,000 - 1,000,000",
+    "1000_1500" => "1,000,000 - 1,500,000",
+    "1500_2000" => "1,500,000 - 2,000,000",
+    "2000_2500" => "2,000,000 - 2,500,000",
+    "2500_3000" => "2,500,000 - 3,000,000",
+    "greater_3000" => "3,000,000 and up",
+
+    "all" => "All",
+    "studio" => "Studio",
+    "1rooms" => "A lounge & Room",
+    "2rooms" => "A lounge & 2 Rooms",
+    "3rooms" => "A lounge & 3 Rooms",
+    "4rooms" => "A lounge & 4 Rooms",
+    ">4rooms" => "A lounge & more than 4 Rooms",
+
+    "<50" => "less than 50 m2",
+    "50_100" => "between 50 m2 and 100 m2",
+    "100_150" => "between 100 m2 and 150 m2",
+    "150_200" => "between 150 m2 and 200 m2",
+    "200_250" => "between 200 m2 and 250 m2",
+    ">250" => "More than 250 m2",
+
+    'open'=>'open',
+    'close'=>'close',
+];

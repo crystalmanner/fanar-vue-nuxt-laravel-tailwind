@@ -1,0 +1,4 @@
+Sitemap: https://admin.fanarrealty.com/sitemap.xml
+User-agent:*
+Disallow:
+

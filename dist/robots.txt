@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /properties
+Allow: /en/properties
+Allow: /blog
+Disallow: /en/blog/*
+Disallow: /*?
+Sitemap: https://fanarrealty.com/sitemap.xml
+Crawl-Delay: 20
