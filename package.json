@@ -2,7 +2,7 @@
   "name": "",
   "version": "1.0.0",
   "description": "Fanar App",
-  "author": "Anas",
+  "author": "Crystal130",
   "private": true,
   "scripts": {
     "dev": "nuxt",
